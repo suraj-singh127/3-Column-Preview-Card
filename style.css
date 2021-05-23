@@ -1,0 +1,122 @@
+
+    /* For the small screens */
+    html{
+      margin: 0;
+      padding: 0;
+      --paraColor:hsla(0, 0%, 100%, 0.75);
+      --headings:hsl(0, 0%, 95%);
+    }
+
+    body {
+      margin: 6rem;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card{
+      display: grid;
+      grid-template-rows: repeat(3,1fr);
+    }
+    
+    .item {
+      width: 19rem;
+      height: 28rem;
+      font-family: 'Lexend Deca', sans-serif;
+    }
+
+    /* Styling the content inside the items */
+    .content h1 {
+      text-transform: uppercase;
+      font-family: 'Big Shoulders Display', cursive;
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15ch;
+    }
+    
+    .content {
+      margin: 2.7rem 3rem;
+      color: var(--headings);
+      font-size: 0.99rem;
+    }
+
+    .content p{
+      color: hsla(0, 0%, 100%, 0.75);
+      line-height: 2.8ch;
+      font-weight: 400;
+    }
+    
+    /* The individual colors and border radius */
+    #sedan {
+      background-color: hsl(31, 77%, 52%);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    #suv {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    #luxury {
+      background-color: hsl(179, 100%, 13%);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    /* Styling the learn more button */
+    .btn {
+      margin-top: 1rem;
+      padding: 0.7rem;
+      border: none;
+      width: 8rem;
+      border-radius: 50px;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 1rem;
+      transition: color 100ms;
+      border: 2px solid var(--headings);
+    }
+
+    #sedan .btn {
+      color: hsl(31, 77%, 52%);
+    }
+
+    #suv .btn {
+      color: hsl(184, 100%, 22%);
+    }
+
+    #luxury .btn {
+      color: hsl(179, 100%, 13%);
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      background-color: transparent;   
+      color: var(--headings);
+    }
+
+    .btn:hover span {
+      color: var(--headings);
+    }
+
+    /* For Desktop Screen */
+    @media only screen and (min-width:900px){
+        
+        .card{
+          display: flex;
+        }
+        .item{
+          height: 31.5rem;
+        }
+        .content p{
+          margin-bottom: 3.8rem;
+        }
+        #sedan{
+          border-bottom-left-radius: 10px;
+          border-top-right-radius: 0;
+        }
+        #luxury{
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 10px;
+        }
+    }
